@@ -19,7 +19,7 @@ export const createEvent = async (req, res) => {
       attendees: req.body.attendees,
     });
     await newEvent.save();
-    res.status(200).json("Event created sucsessully");
+    res.status(200).json(`Event created sucsessully with id ${newEvent._id}`);
   } catch (error) {
     res.send(error)
   }
